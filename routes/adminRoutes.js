@@ -8,6 +8,11 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("admin Route Working!");
+});
+
+
 //GET METHOD || USERS
 router.get("/getAllUsers", authMiddleware, getAllUsersController);
 

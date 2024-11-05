@@ -9,6 +9,10 @@ const {
 const authMiddleware = require("../middlewares/authMiddleware");
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("doctor  Route Working!");
+});
+
 //POST SINGLE DOC INFO
 router.post("/getDoctorInfo", authMiddleware, getDoctorInfoController);
 
